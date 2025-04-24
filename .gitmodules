@@ -1,0 +1,9 @@
+[submodule "frontend"]
+	path = frontend
+	url = https://github.com/Upsiloner/AT_front.git
+[submodule "AT_end"]
+	path = AT_end
+	url = https://github.com/Upsiloner/AT_end.git
+[submodule "backend"]
+	path = backend
+	url = https://github.com/Upsiloner/AT_back.git
