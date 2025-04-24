@@ -1,0 +1,38 @@
+services:
+    backend:
+        build: ./backend
+        container_name: backend
+        volumes:
+            - ./backend:/app
+        ports:
+            - "8060:8060"
+        depends_on:
+            - redis
+            - db
+        environment:
+            - DB_URL=mysql+pymysql://root:password@db:3306/mydb
+            - REDIS_URL=redis://redis:6379
+
+    frontend:
+        build: ./frontend
+        container_name: frontend
+        volumes:
+            - ./frontend:/app
+            - /app/node_modules  # 保证容器内部的 node_modules 不被挂载覆盖
+        ports:
+            - "6060:6060"   # 映射 6060 端口
+
+    db:
+        image: mysql:8
+        container_name: mysql
+        environment:
+            MYSQL_ROOT_PASSWORD: password
+            MYSQL_DATABASE: mydb
+        ports:
+            - "3306:3306"
+
+    redis:
+        image: redis:6
+        container_name: redis
+        ports:
+            - "6379:6379"
