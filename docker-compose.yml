@@ -13,6 +13,15 @@ services:
             - DB_URL=mysql+pymysql://root:password@db:3306/mydb
             - REDIS_URL=redis://redis:6379
 
+            - EMAIL_SENDER=zhangyutongxue@163.com
+            - EMAIL_PASSWORD=VJUUbissfaMc7wgk
+            - EMAIL_SENDER_NAME=AuroraTune
+            - SMTP_SERVER=smtp.163.com
+            - SMTP_PORT=465
+        dns:
+            - 8.8.8.8
+            - 114.114.114.114
+
     frontend:
         build: ./frontend
         container_name: frontend

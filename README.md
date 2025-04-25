@@ -1,16 +1,16 @@
 # AuroraTune
 
-### ?? ÏîÄ¿Æô¶¯Óë×ÊÔ´ÅäÖÃ
+## âš™ï¸ é¡¹ç›®å¯åŠ¨ä¸Žèµ„æºé…ç½®
 
-#### 1. ¾µÏñÅäÖÃ
-ÎªÁË¼ÓËÙ Docker ¾µÏñµÄÀ­È¡ËÙ¶È£¬Äú¿ÉÒÔÊ¹ÓÃ¹úÄÚµÄ¾µÏñÔ´¡£ÀýÈç£¬Äú¿ÉÒÔÊ¹ÓÃ°¢ÀïÔÆ¡¢DaoCloud¡¢ÍøÒ×µÈÌá¹©µÄ¾µÏñ·þÎñ¡£
+### 1. é•œåƒé…ç½®
+ä¸ºäº†åŠ é€Ÿ Docker é•œåƒçš„æ‹‰å–é€Ÿåº¦ï¼Œæ‚¨å¯ä»¥ä½¿ç”¨å›½å†…çš„é•œåƒæºã€‚ä¾‹å¦‚ï¼Œæ‚¨å¯ä»¥ä½¿ç”¨é˜¿é‡Œäº‘ã€DaoCloudã€ç½‘æ˜“ç­‰æä¾›çš„é•œåƒæœåŠ¡ã€‚
 
-ÔÚ Linux ÏµÍ³ÉÏ£¬Ö´ÐÐÒÔÏÂÃüÁî£º
+åœ¨ Linux ç³»ç»Ÿä¸Šï¼Œæ‰§è¡Œä»¥ä¸‹å‘½ä»¤ï¼š
 ```bash
 sudo mkdir -p /etc/docker
 sudo vim /etc/docker/daemon.json
 ```
-½«ÒÔÏÂÄÚÈÝÌí¼Óµ½ daemon.json ÖÐ£º
+å°†ä»¥ä¸‹å†…å®¹æ·»åŠ åˆ° daemon.json ä¸­ï¼š
 ```bash
 {
   "registry-mirrors": [
@@ -20,27 +20,43 @@ sudo vim /etc/docker/daemon.json
   ]
 }
 ```
-ÔÚ Windows ÏµÍ³ÉÏ£¬Äú¿ÉÒÔÍ¨¹ý Docker Desktop UI ÅäÖÃ¼ÓËÙÆ÷£¬Ñ¡Ôñ Settings > Docker Engine£¬È»ºóÔÚÅäÖÃÖÐÌí¼Ó¾µÏñÔ´¡£
+åœ¨ Windows ç³»ç»Ÿä¸Šï¼Œæ‚¨å¯ä»¥é€šè¿‡ Docker Desktop UI é…ç½®åŠ é€Ÿå™¨ï¼Œé€‰æ‹© Settings > Docker Engineï¼Œç„¶åŽåœ¨é…ç½®ä¸­æ·»åŠ é•œåƒæºã€‚
 
-×îºóÖØÆô Docker ·þÎñÒÔÊ¹ÅäÖÃÉúÐ§£º
+æœ€åŽé‡å¯ Docker æœåŠ¡ä»¥ä½¿é…ç½®ç”Ÿæ•ˆï¼š
 ```bash
 sudo systemctl restart docker
 ```
 
-#### 2. Æô¶¯ËùÓÐ·þÎñ
-ÔÚÏîÄ¿¸ùÄ¿Â¼ÏÂ£¬Ê¹ÓÃÒÔÏÂÃüÁîÆô¶¯ Docker ÈÝÆ÷£º
+### 2. å¯åŠ¨æ‰€æœ‰æœåŠ¡
+åœ¨é¡¹ç›®æ ¹ç›®å½•ä¸‹ï¼Œä½¿ç”¨ä»¥ä¸‹å‘½ä»¤å¯åŠ¨ Docker å®¹å™¨ï¼š
 ```bash
 docker compose up --build
 ```
 
-#### 3. Ê§°ÜÊ±ÈçºÎµ¥¶ÀÀ­È¡¾µÏñ
+### 3. å¤±è´¥æ—¶å¦‚ä½•å•ç‹¬æ‹‰å–é•œåƒ
 
-Èç¹ûÔÚ¹¹½¨¹ý³ÌÖÐÓöµ½Ê§°Ü£¬»òÕßÄãÏ£ÍûÖØÐÂÀ­È¡¾µÏñ£¬¿ÉÒÔµ¥¶ÀÀ­È¡¾µÏñÀ´¸üÐÂ»òÐÞ¸´¾µÏñ£º
+å¦‚æžœåœ¨æž„å»ºè¿‡ç¨‹ä¸­é‡åˆ°å¤±è´¥ï¼Œæˆ–è€…ä½ å¸Œæœ›é‡æ–°æ‹‰å–é•œåƒï¼Œå¯ä»¥å•ç‹¬æ‹‰å–é•œåƒæ¥æ›´æ–°æˆ–ä¿®å¤é•œåƒï¼š
 ```bash
 docker pull your-image
 ```
-ÔÚÄ³Ð©Çé¿öÏÂ£¬¿ÉÄÜ»áÐèÒªÉ¾³ý±¾µØ»º´æµÄ¾µÏñºóÖØÐÂÀ­È¡£º
+åœ¨æŸäº›æƒ…å†µä¸‹ï¼Œå¯èƒ½ä¼šéœ€è¦åˆ é™¤æœ¬åœ°ç¼“å­˜çš„é•œåƒåŽé‡æ–°æ‹‰å–ï¼š
 ```bash
-docker rmi <image_id>  # É¾³ý±¾µØ¾µÏñ
-docker-compose up --build  # ÖØÐÂ¹¹½¨ºÍÆô¶¯·þÎñ
+docker rmi <image_id>  # åˆ é™¤æœ¬åœ°é•œåƒ
+docker-compose up --build  # é‡æ–°æž„å»ºå’Œå¯åŠ¨æœåŠ¡
+```
+
+## ðŸ‹ docker-compose é…ç½®
+
+### 1. é‚®ç®± SMTP ä»£ç†
+
+æ›¿æ¢å¦‚ä¸‹å­—æ®µï¼š
+```bash
+services:
+    backend:
+        environment:
+            - EMAIL_SENDER=your_email
+            - EMAIL_PASSWORD=your_authorization_code
+            - EMAIL_SENDER_NAME=your_name
+            - SMTP_SERVER=smtp.xxx.com
+            - SMTP_PORT=465
 ```
