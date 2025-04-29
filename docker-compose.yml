@@ -45,3 +45,16 @@ services:
         container_name: redis
         ports:
             - "6379:6379"
+    
+    minio:
+        image: minio/minio
+        container_name: minio
+        ports:
+            - "9000:9000"
+            - "9001:9001"  # 控制台面板端口
+        environment:
+            MINIO_ROOT_USER: admin
+            MINIO_ROOT_PASSWORD: admin123
+        command: server /data --console-address ":9001"
+        volumes:
+            - ./minio_data:/data
