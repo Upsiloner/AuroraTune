@@ -60,3 +60,9 @@ services:
             - SMTP_SERVER=smtp.xxx.com
             - SMTP_PORT=465
 ```
+
+## 🔒 权限管理
+
+### 1. 管理员设置
+
+这是一个临时的方案，在 `/app/core/config.py` 里添加管理员的用户名。
